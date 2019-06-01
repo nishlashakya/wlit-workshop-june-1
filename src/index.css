@@ -1,7 +1,8 @@
 .movie-card {
   margin-top: 2rem;
   margin-bottom: 3rem;
-  width: 18rem
+  width: 18rem;
+  float: left;
 }
 
 .button {

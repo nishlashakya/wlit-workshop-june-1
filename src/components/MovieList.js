@@ -19,14 +19,6 @@ class Home extends Component {
         })
     }
 
-    handleDelete = (id) => {
-      fetch(this.serverURL + id, { method: 'DELETE' });
-      const movies = this.state.movies;
-      const position = movies.findIndex((movie) => id === movie.id);
-      movies.splice(position, 1);
-      this.setState({ movies });
-    }
-
     render() {
         return (
           <div className="container">

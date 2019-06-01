@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Link } from 'react-router-dom'
 import {snakeCase} from 'lodash'
 class Home extends Component {
     constructor(props) {
@@ -39,8 +40,8 @@ class Home extends Component {
                         <h5 className="card-title">{movie.name}</h5>
                         <p className="card-text">Cast: {movie.cast}</p>
                         <p className="card-text">Genre: {movie.genre}</p>
-                        <button className="btn btn-primary button">Edit</button>
-                        <button className="btn btn-danger button">Delete</button>
+                        <Link className="btn btn-primary button" to={`/edit-movie/${movie.id}`}>Edit</Link>
+                        <button className="btn btn-danger button" onClick={() => this.handleDelete(movie.id)}>Delete</button>
                       </div>
                     </div>
                   </div>

@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
 import Header from './components/Header'
 import MovieList from './components/MovieList'
+import MovieAdd from './components/MovieAdd'
 
 class App extends Component {
   render() {
     return (
-      <>
-        <Header />
-        <MovieList />
-      </>
+      <BrowserRouter>
+        <Header/>
+        <Switch>
+          <Route exact path="/" component={MovieList} />
+          <Route exact path="/add-movie" component={MovieAdd} />
+        </Switch>
+      </BrowserRouter>
     )
   }
 }
